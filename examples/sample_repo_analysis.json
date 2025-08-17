@@ -1,0 +1,240 @@
+{
+  "repository_path": "/home/user/projects/sample-project",
+  "analysis_date": "2024-01-15T14:30:00",
+  "total_files": 45,
+  "total_size_mb": 1.2,
+  "total_lines_of_code": 2847,
+  "total_lines_of_comments": 567,
+  "total_blank_lines": 423,
+  "languages": [
+    {
+      "language": "Python",
+      "file_count": 18,
+      "total_lines": 1890,
+      "percentage": 66.4
+    },
+    {
+      "language": "JavaScript",
+      "file_count": 12,
+      "total_lines": 567,
+      "percentage": 19.9
+    },
+    {
+      "language": "HTML",
+      "file_count": 8,
+      "total_lines": 234,
+      "percentage": 8.2
+    },
+    {
+      "language": "CSS",
+      "file_count": 4,
+      "total_lines": 89,
+      "percentage": 3.1
+    },
+    {
+      "language": "Markdown",
+      "file_count": 2,
+      "total_lines": 45,
+      "percentage": 1.6
+    },
+    {
+      "language": "JSON",
+      "file_count": 1,
+      "total_lines": 22,
+      "percentage": 0.8
+    }
+  ],
+  "git_stats": {
+    "total_commits": 127,
+    "contributors": [
+      "John Doe",
+      "Jane Smith",
+      "Bob Johnson",
+      "Alice Brown"
+    ],
+    "top_contributors": {
+      "John Doe": 45,
+      "Jane Smith": 38,
+      "Bob Johnson": 29,
+      "Alice Brown": 15
+    },
+    "most_changed_files": [
+      "src/main.py",
+      "src/utils.py",
+      "tests/test_main.py",
+      "src/config.py",
+      "README.md",
+      "requirements.txt",
+      "src/models.py",
+      "tests/test_utils.py",
+      "src/api.py",
+      "docs/api.md"
+    ],
+    "commit_activity": {
+      "2024-01-01": 3,
+      "2024-01-02": 1,
+      "2024-01-03": 0,
+      "2024-01-04": 2,
+      "2024-01-05": 4,
+      "2024-01-06": 1,
+      "2024-01-07": 0,
+      "2024-01-08": 3,
+      "2024-01-09": 2,
+      "2024-01-10": 1,
+      "2024-01-11": 0,
+      "2024-01-12": 2,
+      "2024-01-13": 1,
+      "2024-01-14": 3,
+      "2024-01-15": 2
+    }
+  },
+  "largest_files": [
+    {
+      "path": "src/main.py",
+      "size_bytes": 45678,
+      "lines_of_code": 234,
+      "lines_of_comments": 45,
+      "blank_lines": 23,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src/utils.py",
+      "size_bytes": 34567,
+      "lines_of_code": 189,
+      "lines_of_comments": 38,
+      "blank_lines": 18,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "tests/test_main.py",
+      "size_bytes": 23456,
+      "lines_of_code": 156,
+      "lines_of_comments": 32,
+      "blank_lines": 15,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src/config.py",
+      "size_bytes": 12345,
+      "lines_of_code": 89,
+      "lines_of_comments": 18,
+      "blank_lines": 8,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src/models.py",
+      "size_bytes": 9876,
+      "lines_of_code": 67,
+      "lines_of_comments": 12,
+      "blank_lines": 6,
+      "language": "Python",
+      "is_binary": false
+    }
+  ],
+  "smallest_files": [
+    {
+      "path": "requirements.txt",
+      "size_bytes": 234,
+      "lines_of_code": 8,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Text",
+      "is_binary": false
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 456,
+      "lines_of_code": 12,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Text",
+      "is_binary": false
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 789,
+      "lines_of_code": 23,
+      "lines_of_comments": 0,
+      "blank_lines": 2,
+      "language": "Markdown",
+      "is_binary": false
+    },
+    {
+      "path": "src/__init__.py",
+      "size_bytes": 123,
+      "lines_of_code": 0,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "tests/__init__.py",
+      "size_bytes": 234,
+      "lines_of_code": 0,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Python",
+      "is_binary": false
+    }
+  ],
+  "files_by_lines": [
+    {
+      "path": "src/main.py",
+      "size_bytes": 45678,
+      "lines_of_code": 234,
+      "lines_of_comments": 45,
+      "blank_lines": 23,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src/utils.py",
+      "size_bytes": 34567,
+      "lines_of_code": 189,
+      "lines_of_comments": 38,
+      "blank_lines": 18,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "tests/test_main.py",
+      "size_bytes": 23456,
+      "lines_of_code": 156,
+      "lines_of_comments": 32,
+      "blank_lines": 15,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src/config.py",
+      "size_bytes": 12345,
+      "lines_of_code": 89,
+      "lines_of_comments": 18,
+      "blank_lines": 8,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src/models.py",
+      "size_bytes": 9876,
+      "lines_of_code": 67,
+      "lines_of_comments": 12,
+      "blank_lines": 6,
+      "language": "Python",
+      "is_binary": false
+    }
+  ],
+  "github_metadata": null,
+  "directory_structure": {
+    "src": 18,
+    "tests": 12,
+    "docs": 8,
+    "config": 4,
+    "scripts": 3
+  }
+}

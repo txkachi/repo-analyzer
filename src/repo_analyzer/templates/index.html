@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Analyzer - Analyze Git Repositories</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group input[type="text"] {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 10px 20px rgba(149, 165, 166, 0.3);
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            padding: 5px 0;
+            color: #6c757d;
+        }
+
+        .info-box li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .examples {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .example-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .example-item strong {
+            color: #2c3e50;
+        }
+
+        .example-item code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Repo Analyzer</h1>
+            <p>Comprehensive Git repository analysis and reporting tool</p>
+        </div>
+
+        <div class="form-container">
+            <form action="/analyze" method="post">
+                <div class="form-group">
+                    <label for="repo_path">Repository Path or GitHub URL *</label>
+                    <input 
+                        type="text" 
+                        id="repo_path" 
+                        name="repo_path" 
+                        placeholder="e.g., /path/to/repo or https://github.com/username/repo"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="github_token">GitHub Token (Optional)</label>
+                        <input 
+                            type="password" 
+                            id="github_token" 
+                            name="github_token" 
+                            placeholder="Personal access token for enhanced metadata"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="output_format">Output Format</label>
+                        <select id="output_format" name="output_format">
+                            <option value="html">HTML Report (with charts)</option>
+                            <option value="markdown">Markdown Report</option>
+                            <option value="json">JSON Report</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn">🔍 Analyze Repository</button>
+                    <button type="button" class="btn btn-secondary" onclick="downloadReport()">📥 Download Report</button>
+                </div>
+            </form>
+
+            <div class="info-box">
+                <h3>What Repo Analyzer Provides:</h3>
+                <ul>
+                    <li>Repository size and file count analysis</li>
+                    <li>Lines of code, comments, and blank lines</li>
+                    <li>Programming language breakdown and statistics</li>
+                    <li>Git commit history and contributor analysis</li>
+                    <li>Most frequently changed files</li>
+                    <li>Directory structure summary</li>
+                    <li>GitHub metadata (stars, forks, issues, PRs)</li>
+                </ul>
+            </div>
+
+            <div class="examples">
+                <h3>Example Usage:</h3>
+                <div class="example-item">
+                    <strong>Local Repository:</strong><br>
+                    <code>/home/user/projects/my-project</code>
+                </div>
+                <div class="example-item">
+                    <strong>GitHub Repository:</strong><br>
+                    <code>https://github.com/username/repository-name</code>
+                </div>
+                <div class="example-item">
+                    <strong>GitHub Repository (SSH):</strong><br>
+                    <code>git@github.com:username/repository-name.git</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadReport() {
+            const repoPath = document.getElementById('repo_path').value;
+            const githubToken = document.getElementById('github_token').value;
+            const outputFormat = document.getElementById('output_format').value;
+            
+            if (!repoPath) {
+                alert('Please enter a repository path first.');
+                return;
+            }
+            
+            // Create a form for download
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '/download';
+            
+            // Add form fields
+            const fields = {
+                'repo_path': repoPath,
+                'github_token': githubToken,
+                'output_format': outputFormat
+            };
+            
+            for (const [key, value] of Object.entries(fields)) {
+                if (value) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = value;
+                    form.appendChild(input);
+                }
+            }
+            
+            // Submit form
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+{
+  "repository_path": "C:\\Users\\atlbl\\Desktop\\Code\\repo-analyzer",
+  "analysis_date": "2025-08-18T00:05:34.383402",
+  "total_files": 26,
+  "total_size_mb": 0.14284229278564453,
+  "total_lines_of_code": 1753,
+  "total_lines_of_comments": 2027,
+  "total_blank_lines": 739,
+  "languages": [
+    {
+      "language": "HTML",
+      "file_count": 3,
+      "total_lines": 798,
+      "percentage": 45.52
+    },
+    {
+      "language": "Markdown",
+      "file_count": 2,
+      "total_lines": 310,
+      "percentage": 17.68
+    },
+    {
+      "language": "Unknown",
+      "file_count": 1,
+      "total_lines": 276,
+      "percentage": 15.74
+    },
+    {
+      "language": "JSON",
+      "file_count": 1,
+      "total_lines": 240,
+      "percentage": 13.69
+    },
+    {
+      "language": "TOML",
+      "file_count": 1,
+      "total_lines": 71,
+      "percentage": 4.05
+    },
+    {
+      "language": "Text only",
+      "file_count": 6,
+      "total_lines": 58,
+      "percentage": 3.31
+    },
+    {
+      "language": "Python",
+      "file_count": 12,
+      "total_lines": 0,
+      "percentage": 0.0
+    }
+  ],
+  "git_stats": {
+    "total_commits": 1,
+    "contributors": [
+      "txkachi"
+    ],
+    "top_contributors": {
+      "txkachi": 1
+    },
+    "most_changed_files": [],
+    "commit_activity": {
+      "2025-08-18": 1
+    }
+  },
+  "largest_files": [
+    {
+      "path": "src\\repo_analyzer\\reporters.py",
+      "size_bytes": 20217,
+      "lines_of_code": 0,
+      "lines_of_comments": 489,
+      "blank_lines": 79,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\analyzer.py",
+      "size_bytes": 14004,
+      "lines_of_code": 0,
+      "lines_of_comments": 302,
+      "blank_lines": 56,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\templates\\result.html",
+      "size_bytes": 13560,
+      "lines_of_code": 348,
+      "lines_of_comments": 0,
+      "blank_lines": 37,
+      "language": "HTML",
+      "is_binary": false
+    },
+    {
+      "path": "tests\\test_analyzer.py",
+      "size_bytes": 13509,
+      "lines_of_code": 0,
+      "lines_of_comments": 257,
+      "blank_lines": 52,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\cli.py",
+      "size_bytes": 11257,
+      "lines_of_code": 0,
+      "lines_of_comments": 257,
+      "blank_lines": 59,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\templates\\index.html",
+      "size_bytes": 10166,
+      "lines_of_code": 284,
+      "lines_of_comments": 0,
+      "blank_lines": 44,
+      "language": "HTML",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\PKG-INFO",
+      "size_bytes": 9783,
+      "lines_of_code": 276,
+      "lines_of_comments": 0,
+      "blank_lines": 85,
+      "language": "Unknown",
+      "is_binary": false
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 8141,
+      "lines_of_code": 238,
+      "lines_of_comments": 0,
+      "blank_lines": 84,
+      "language": "Markdown",
+      "is_binary": false
+    },
+    {
+      "path": "tests\\test_utils.py",
+      "size_bytes": 6269,
+      "lines_of_code": 0,
+      "lines_of_comments": 133,
+      "blank_lines": 35,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\templates\\error.html",
+      "size_bytes": 6166,
+      "lines_of_code": 166,
+      "lines_of_comments": 0,
+      "blank_lines": 24,
+      "language": "HTML",
+      "is_binary": false
+    }
+  ],
+  "smallest_files": [
+    {
+      "path": "src\\repo_analyzer.egg-info\\dependency_links.txt",
+      "size_bytes": 1,
+      "lines_of_code": 0,
+      "lines_of_comments": 0,
+      "blank_lines": 1,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\top_level.txt",
+      "size_bytes": 14,
+      "lines_of_code": 1,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "tests\\__init__.py",
+      "size_bytes": 49,
+      "lines_of_code": 0,
+      "lines_of_comments": 1,
+      "blank_lines": 0,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\entry_points.txt",
+      "size_bytes": 55,
+      "lines_of_code": 2,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\requires.txt",
+      "size_bytes": 276,
+      "lines_of_code": 18,
+      "lines_of_comments": 0,
+      "blank_lines": 1,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 360,
+      "lines_of_code": 19,
+      "lines_of_comments": 0,
+      "blank_lines": 1,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\__init__.py",
+      "size_bytes": 428,
+      "lines_of_code": 0,
+      "lines_of_comments": 13,
+      "blank_lines": 3,
+      "language": "Python",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\SOURCES.txt",
+      "size_bytes": 550,
+      "lines_of_code": 18,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 2140,
+      "lines_of_code": 71,
+      "lines_of_comments": 0,
+      "blank_lines": 9,
+      "language": "TOML",
+      "is_binary": false
+    },
+    {
+      "path": "examples\\README.md",
+      "size_bytes": 3155,
+      "lines_of_code": 72,
+      "lines_of_comments": 0,
+      "blank_lines": 26,
+      "language": "Markdown",
+      "is_binary": false
+    }
+  ],
+  "files_by_lines": [
+    {
+      "path": "src\\repo_analyzer\\templates\\result.html",
+      "size_bytes": 13560,
+      "lines_of_code": 348,
+      "lines_of_comments": 0,
+      "blank_lines": 37,
+      "language": "HTML",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\templates\\index.html",
+      "size_bytes": 10166,
+      "lines_of_code": 284,
+      "lines_of_comments": 0,
+      "blank_lines": 44,
+      "language": "HTML",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\PKG-INFO",
+      "size_bytes": 9783,
+      "lines_of_code": 276,
+      "lines_of_comments": 0,
+      "blank_lines": 85,
+      "language": "Unknown",
+      "is_binary": false
+    },
+    {
+      "path": "examples\\sample_repo_analysis.json",
+      "size_bytes": 5416,
+      "lines_of_code": 240,
+      "lines_of_comments": 0,
+      "blank_lines": 0,
+      "language": "JSON",
+      "is_binary": false
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 8141,
+      "lines_of_code": 238,
+      "lines_of_comments": 0,
+      "blank_lines": 84,
+      "language": "Markdown",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer\\templates\\error.html",
+      "size_bytes": 6166,
+      "lines_of_code": 166,
+      "lines_of_comments": 0,
+      "blank_lines": 24,
+      "language": "HTML",
+      "is_binary": false
+    },
+    {
+      "path": "examples\\README.md",
+      "size_bytes": 3155,
+      "lines_of_code": 72,
+      "lines_of_comments": 0,
+      "blank_lines": 26,
+      "language": "Markdown",
+      "is_binary": false
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 2140,
+      "lines_of_code": 71,
+      "lines_of_comments": 0,
+      "blank_lines": 9,
+      "language": "TOML",
+      "is_binary": false
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 360,
+      "lines_of_code": 19,
+      "lines_of_comments": 0,
+      "blank_lines": 1,
+      "language": "Text only",
+      "is_binary": false
+    },
+    {
+      "path": "src\\repo_analyzer.egg-info\\requires.txt",
+      "size_bytes": 276,
+      "lines_of_code": 18,
+      "lines_of_comments": 0,
+      "blank_lines": 1,
+      "language": "Text only",
+      "is_binary": false
+    }
+  ],
+  "github_metadata": null,
+  "directory_structure": {
+    "src": 17,
+    "src/repo_analyzer": 11,
+    "src/repo_analyzer.egg-info": 6,
+    "tests": 3,
+    "src/repo_analyzer/templates": 3,
+    "examples": 2
+  }
+}

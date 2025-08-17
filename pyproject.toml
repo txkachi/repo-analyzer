@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-analyzer"
+version = "1.0.0"
+description = "A comprehensive tool for analyzing Git repositories and generating detailed reports"
+authors = [
+    {name = "Repository Analyzer Team", email = "team@repoanalyzer.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+keywords = ["git", "repository", "analysis", "statistics", "reports"]
+dependencies = [
+    "typer>=0.9.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "jinja2>=3.1.0",
+    "matplotlib>=3.7.0",
+    "plotly>=5.17.0",
+    "requests>=2.31.0",
+    "gitpython>=3.1.0",
+    "pygments>=2.17.0",
+    "rich>=13.6.0",
+    "pydantic>=2.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.9.0",
+    "isort>=5.12.0",
+    "mypy>=1.6.0",
+    "flake8>=6.1.0",
+]
+
+[project.scripts]
+repoanalyze = "repo_analyzer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/txkachi/repo-analyzer"
+Repository = "https://github.com/txkachi/repo-analyzer"
+Documentation = "https://github.com/txkachi/repo-analyzer#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=repo_analyzer --cov-report=html --cov-report=term-missing"

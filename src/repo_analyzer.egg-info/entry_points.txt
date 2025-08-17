@@ -1,0 +1,2 @@
+[console_scripts]
+repoanalyze = repo_analyzer.cli:main
